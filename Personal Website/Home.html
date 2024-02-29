@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang ='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width-device-width", intial-scale="1.0">
+    <title> Document</title>
+    <link rel="stylesheet" href="Formatting.CSS">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="website-pictures/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>CS Student @ UNC</p>
+            <h1>Hey, I'm <span>Ethan</span> <br> Yountz From Charlotte</h1>
+        </div>
+    </div>
+</div>
+<!---------about--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+              <img src="website-pictures/IMG_2397.PNG"> 
+            </div>
+            <div class="about-col-2">
+                <h1 class='subtitle'>About Me</h1>
+                <p> Yap</p>
+
+                <div class="tab-titles">
+                    <p class='tab-links active-link' onclick="opentab('skills')"> Skills</p>
+                    <p class='tab-links' onclick="opentab('experience')"> Experience</p>
+                    <p class='tab-links' onclick="opentab('education')"> Education</p>
+                </div>
+                <div class="tab-contents active-tab" id='skills'>
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces (HTML/CSS/JSS)</li>
+                        <li><span>Backend Programming</span><br>Creating Computational Programs (Python)</li>
+                        <li><span>Graphic Design</span><br>Proficent in Photoshop (mess with this text later)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id='experience'>
+                    <ul>
+                        <li><span>Spring 2022</span><br>Completed an Intenship with Carolina FinTech Hub and Atrium Health</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id='education'>
+                    <ul>
+                        <li><span>Currently</span><br>Purusing BS in CS and Mathematics @ UNC</li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------Portfolio--------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="website-pictures/work-1.png">
+                <div class="layer">
+                    <h3>Project 1</h3>
+                    <p> Yapp about project</p>
+                    <a href="#"><i class="fa-solid fa-link" style="color: #74C0FC;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="website-pictures/work-2.png">
+                <h3>Project 2</h3>
+                    <p> Yapp about project</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+            <div class="work">
+                <img src="website-pictures/work-3.png">
+                <h3>Project 3</h3>
+                    <p> Yapp about project</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add('active-tab');
+    }
+
+</script>
+
+</body>
+</html>
